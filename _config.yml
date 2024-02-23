@@ -35,7 +35,7 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-footer: "© 2023 Wu Yaxu"
+footer: "© 2024 Wu Yaxu"
 
 # Build settings
 remote_theme: b2a3e8/jekyll-theme-console
