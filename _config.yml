@@ -13,6 +13,7 @@ description: > # this means to ignore newlines until "baseurl:"
 #repository: https://github.com/wemake-services/jekyll-theme-hackcss
 baseurl:   # the subpath of your site, e.g. /blog
 url: http://192.168.100.10  # the base hostname & protocol for your site, change the {IP} to yours
+timezone: Asia/Shanghai
 
 # Build settings
 markdown: kramdown
