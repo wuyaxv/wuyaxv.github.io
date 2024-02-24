@@ -1,7 +1,7 @@
 ---
-title: Posts
-layout: home
-permalink: /
+layout: default
 ---
 
-Welcome to my page.
+# Showcase
+
+Hack the Planet!

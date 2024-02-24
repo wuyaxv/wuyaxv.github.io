@@ -1,29 +1,36 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>{{ page.title }}</title>
-  {%- seo title=false -%}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {% if page.robots %}
-    <meta name="robots" content="{{page.robots}}" />
+  <!-- Favicon -->
+  <link rel="icon" href="{{ "/favicon.png" | prepend: site.baseurl }}">
+
+  <!-- Meta information -->
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <!-- <meta name="description"
+	  content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"> -->
+  <link rel="canonical"
+        href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+
+  <!-- hack.css -->
+  <link rel="stylesheet" href="https://npmcdn.com/hack/dist/hack.css" />
+  {% if site.theme_mode == 'standard' %}
+  <link rel="stylesheet" href="https://npmcdn.com/hack/dist/standard.css" />
+  {% elsif site.theme_mode == 'dark' %}
+  <link rel="stylesheet" href="https://npmcdn.com/hack/dist/dark.css" />
   {% endif %}
 
-  {%- if site.listen_for_clients_preferred_style -%}
-    <link rel="stylesheet" type="text/css" href="{{ "/assets/main.css" | relative_url }}">
-  {%- else -%}
-    {%- if site.style == 'light' -%}
-      <link rel="stylesheet" type="text/css" href="{{ "/assets/main-light.css" | relative_url }}">
-    {%- elsif site.style == 'hacker' -%}
-      <link rel="stylesheet" type="text/css" href="{{ "/assets/main-hacker.css" | relative_url }}">
-    {%- else -%}
-      <link rel="stylesheet" type="text/css" href="{{ "/assets/main-dark.css" | relative_url }}">
-    {%- endif -%}
-  {%- endif -%}
+  <!-- Prism.js -->
+  <link rel="stylesheet" href="https://npmcdn.com/prismjs@1.5.1/themes/prism.css" />
 
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-  {%- endif -%}
+  <!-- Custom style -->
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" />
 
-  <link rel="stylesheet" type="text/css" href="{{ "/assets/github.css" | relative_url }}">
+  <!-- Feed -->
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
+        href="{{ "/feed.xml" | prepend: site.baseurl }}" />
+
+  <!-- 'jekyll-seo' plugin -->
+  {% seo %}
 </head>

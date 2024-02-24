@@ -1,64 +1,57 @@
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
+# which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
+# 'jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: 'wuyaxv.github.io'
-# email: wuyaxu@foxmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Personal Blog & stuff.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "wuyaxv.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-
-header_pages:
-  - index.md
-  - about.md
-
-style: light
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
-footer: "© 2024 Wu Yaxu"
+title: wuyaxv's pit.
+footer_title: Contact Me
+description: > # this means to ignore newlines until "baseurl:"
+  <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://XXXLINKSTOWORK/XXXX">The articles on this website</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://XXXMYPERSONALWEBSITE/XXXXX">wuyaxu</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
+#repository: https://github.com/wemake-services/jekyll-theme-hackcss
+baseurl:   # the subpath of your site, e.g. /blog
+url: http://192.168.100.10  # the base hostname & protocol for your site, change the {IP} to yours
 
 # Build settings
-remote_theme: b2a3e8/jekyll-theme-console
+markdown: kramdown
+
+# Sass settings
+sass:
+  style: compressed
+
+# Theme settings
+theme_mode: markdown  # choices are: 'dark', 'standard', 'markdown'
+
+# Customizations
+your_name: 👋 
+email: wuyaxu.info@gmail.com
+
+navigation:
+  - text: About
+    url: /
+  - text: Blogs
+    url: /blogs
+
+projects:
+  # Template for ref.
+  #  - name: git-secret
+  #    description: A bash-tool to store your private data inside a git repository.
+  #    link: https://sobolevn.github.io/git-secret
+  #    image: https://github.com/sobolevn/git-secret/blob/7c9ae0b1853d4c15549027524121b9e40219fe47/images/git-secret-sm.png?raw=true
+
+social:
+  - service: github
+    username: wuyaxv
+    link: https://github.com/wuyaxv
+  - service: x
+    username: wu_yaxu
+    link: https://twitter.com/wu_yaxu
+  - service: telegram
+    username: wuyaxv
+    link: https://t.me/wuyaxv
+
+# Plugins
 plugins:
-  - jekyll-feed
-
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+  - jekyll-seo-tag
