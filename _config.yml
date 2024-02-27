@@ -29,7 +29,7 @@ theme_mode: dark  # choices are: 'dark', 'standard', 'markdown'
 
 # Customizations
 your_name: 👋 
-email: wuyaxu.info@gmail.com
+email: wuyaxu.info [at] gmail [dot] com
 
 navigation:
   - text: About
