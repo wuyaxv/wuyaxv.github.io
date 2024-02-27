@@ -7,4 +7,16 @@ short_description: Just a test post(and the 1st post) to test if the site works 
 image_preview: /assets/images/nyan-cat-nyan.gif
 ---
 
-Hello world. Let's hack the planet.
+Hello world. Let's hack the planet.  
+你好世界
+
+{% highlight c linenos %}
+#include <cstdio>
+
+int main(void)
+{
+    printf("Hello world\n");
+
+    return 0;
+}
+{% endhighlight %}
