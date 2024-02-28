@@ -11,9 +11,6 @@ image_preview: /assets/images/nyan-cat-nyan.gif
 Hello world. Let's hack the planet.  
 你好世界
  
-inline videos:  
-<iframe src="//player.bilibili.com/player.html?aid=80433022&bvid=BV1GJ411x7h7&cid=137649199&p=1" scrolling="yes" border="yes" frameborder="yes" framespacing="0" allowfullscreen="true"> </iframe>
-
 C code highlight:
 {% highlight c %} 
 #include <cstdio>
@@ -25,7 +22,6 @@ int main(void)
     return 0;
 }
 {% endhighlight %}
-
 
 Python code highlight test:
 
@@ -148,16 +144,17 @@ pie title Pets adopted by volunteers
   "Rats" : 35
 ```
 
-Tables support:  
-|--|--|--|--|--|--|--|--|  
-|♜| |♝|♛|♚|♝|♞|♜|  
-| |♟|♟|♟| |♟|♟|♟|  
-|♟| |♞| | | | | |  
-| |♗| | |♟| | | |  
-| | | | |♙| | | |  
-| | | | | |♘| | |  
-|♙|♙|♙|♙| |♙|♙|♙|  
-|♖|♘|♗|♕|♔| | |♖|  
+Tables support: 
+
+|---|---|---|--|---|---|---|---|
+|♜| |♝|♛|♚|♝|♞|♜|
+| |♟|♟|♟| |♟|♟|♟|
+|♟| |♞| | | | | | 
+| |♗| | |♟| | | | 
+| | | | |♙| | | |
+| | | | | |♘| | |
+|♙|♙|♙|♙| |♙|♙|♙| 
+|♖|♘|♗|♕|♔| | |♖|
 
 MathJax:  
 $ \int\_a^b f(x)\,dx. $  
