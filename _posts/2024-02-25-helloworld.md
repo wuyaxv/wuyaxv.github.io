@@ -5,7 +5,7 @@ date: 2024-02-24 01:08:00
 mermaid: true
 categories: site-building
 short_description: Just a test post(and the 1st post) to test if the site works properly.
-image_preview: /assets/images/nyan-cat-nyan.gif
+image_preview: /assets/images/image_preview/nyan-cat-nyan.gif
 ---
 
 Hello world. Let's hack the planet.  

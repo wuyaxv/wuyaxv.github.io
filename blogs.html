@@ -15,7 +15,7 @@ permalink: blogs
   <h2>Posts</h2>
 
   {% for post in site.posts %}
-    {% assign nth = forloop.index0 | modulo:2 %}
+    {% assign nth = forloop.index0 | modulo:1 %}
     <div class="media t-hackcss-media">
 
       {% if nth == 0 %}
