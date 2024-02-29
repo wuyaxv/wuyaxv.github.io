@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploy OpenWrt Virtual Machine on Proxmox VE
-date: 2024-02-28 23:00:00
+date: 2024-02-29 23:00:00 +0800
 categories: virtual-machine
 short_description: It ain't that hard.
 image_preview: /assets/images/image_preview/OpenWrt_Logo.svg
@@ -35,7 +35,7 @@ Deploying OpenWrt VMs is different from deploying an Ubuntu guest because there 
 So, for starters, we need to create a virtual machine with no disk attached. This process is exactly the same as creating a virtual machine on Proxmox with a few exceptions: no disk files are generated and included as we plan to import the disk of the system afterwards, Also, there is no need to use CD/DVD files, so it's okay to 
 just set the option of not using any media.
 
-![No media](/assets/images/posts/2/no_media.png)
+![No media](/assets/images/posts/2/no_media.png){: width="100%" height="100%"}
 
 Configure the rest and delete the disk file.
 
@@ -49,7 +49,7 @@ qm disk import 201 ./openwrt-23.05.2-x86-64-generic-squashfs-combined.img local-
 Go to the `Hardware` option on the side-bar and select the `Hard Disk(scsi0)`, choose to `edit` then hit `ok`. Now we've successfully set up the disk.  
 Before booting up the disk, we also need to go to the `Options` and set the `Boot Order` to boot scsi0 device first.
 
-![Boot Order](/assets/images/posts/2/boot_order.png)
+![Boot Order](/assets/images/posts/2/boot_order.png){: width="100%" height="100%"}
 
 With that, it's time to boot the system.
 
