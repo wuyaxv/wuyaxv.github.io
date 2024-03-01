@@ -9,9 +9,9 @@ image_preview: /assets/images/image_preview/OpenWrt_Logo.svg
 
 So you want to simulate a network topology just on your personal box, right?
 
-## 0x01. Select proper image
+## 0x01. Select appropriate image
 
-To begin with, we need to download a proper [image](https://mirrors.ustc.edu.cn/openwrt/) for deployment, and mirror sites are always 
+To begin with, we need to download a appropriate [image](https://mirrors.ustc.edu.cn/openwrt/) for deployment, and mirror sites are always 
 a better choice compared to the original. Here I choose the [stable release](https://mirrors.ustc.edu.cn/openwrt/releases/23.05.2/targets/x86/64/openwrt-23.05.2-x86-64-generic-squashfs-combined.img.gz) for deployment.
 
 ## 0x02. Resize the image
@@ -56,7 +56,7 @@ With that, it's time to boot the system.
 ## 0x04. Setup the System
 
 ### Network Configuration
-Before booting up the system, I allocated two Linux Bridge devices to this VM named vmbr0 and vmbr1 repectively. The vmbr0 bridge acts as a gateway 
+Before booting up the system, I allocated two Linux Bridge devices to this VM named vmbr0 and vmbr1 respectively. The vmbr0 bridge acts as a gateway 
 and connects to the `WAN` interface of the VM while the vmbr1 bridge acts as an internal switch that connects to the `LAN` interface of the VM.  
 This is for the purpose of simulating a situation where local machines connect to the `LAN`(aka vmbr1), and OpenWrt acts as a fully functional router and redirect
 the traffic of local machines to the outside network, so that local machines can get access to the Internet.
