@@ -56,12 +56,12 @@ With that, it's time to boot the system.
 ## 0x04. Setup the System
 
 ### Network Configuration
-Before booting up the system, I allocated two Linux Bridge devices to this VM named vmbr0 and vmbr1 respectively. The vmbr0 bridge acts as a gateway 
+Before booting up the system, I allocated two Linux bridge devices to this VM named vmbr0 and vmbr1 respectively. The vmbr0 bridge acts as a gateway 
 and connects to the `WAN` interface of the VM while the vmbr1 bridge acts as an internal switch that connects to the `LAN` interface of the VM.  
 This is for the purpose of simulating a situation where local machines connect to the `LAN`(aka vmbr1), and OpenWrt acts as a fully functional router and redirect
 the traffic of local machines to the outside network, so that local machines can get access to the Internet.
 
-By default, OpenWrt sets the vmbr0 to `LAN` and sets the vmbr1 to `WAN`. To change the default settings, we need to edit the config file at `/etc/config/network` as follows:
+By default, OpenWrt sets vmbr0 to `LAN` and vmbr1 to `WAN`. To change the default settings, we need to edit the config file at `/etc/config/network` as follows:
 
 ```
 config interface 'loopback'
@@ -87,8 +87,8 @@ config interface 'wan'
 config interface 'lan'
     option device 'eth1'
     option proto 'static'
-        option ipaddr '192.168.2.1'
-        option netmask '255.255.255.0'
+    option ipaddr '192.168.2.1'
+    option netmask '255.255.255.0'
 
 config interface 'wan6'
     option device 'eth1'
