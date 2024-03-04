@@ -14,11 +14,20 @@
         href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
 
   <!-- hack.css -->
+  <!--
   <link rel="stylesheet" href="https://npmcdn.com/hack/dist/hack.css" />
   {% if site.theme_mode == 'standard' %}
   <link rel="stylesheet" href="https://npmcdn.com/hack/dist/standard.css" />
   {% elsif site.theme_mode == 'dark' %}
   <link rel="stylesheet" href="https://npmcdn.com/hack/dist/dark.css" />
+  {% endif %}
+  -->
+
+  <link rel="stylesheet" href="/assets/hackcss/hack.css" />
+  {% if site.theme_mode == 'standard' %}
+  <link rel="stylesheet" href="/assets/hackcss/standard.css" />
+  {% elsif site.theme_mode == 'dark' %}
+  <link rel="stylesheet" href="/assets/hackcss/dark.css" />
   {% endif %}
 
   <!-- Prism.js -->
