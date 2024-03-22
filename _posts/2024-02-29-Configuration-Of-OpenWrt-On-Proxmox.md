@@ -25,14 +25,13 @@ gzip -d openwrt-23.05.2-x86-64-generic-squashfs-combined.img.gz
 qemu-img resize -f raw openwrt-23.05.2-x86-64-generic-squashfs-combined.img 1000M
 ```
 
-After the resizing process, upload the img file to the Proxmox server using sftp(or by whatever means you prefer), and we'll
-use it later on.
+After the resizing process, upload the img file to the Proxmox server using sftp(or by whatever means you prefer), and we'll use it later on.
 
 ## 0x03. Create the guest
 
 Deploying OpenWrt VMs is different from deploying an Ubuntu guest because there is no ISO file for us to use to install the system. That means we need to import the disk extracted previously to an existing Guest with a valid VMID.
 
-So, for starters, we need to create a virtual machine with no disk attached. This process is exactly the same as creating a virtual machine on Proxmox with a few exceptions: no disk files are generated and included as we plan to import the disk of the system afterwards, Also, there is no need to use CD/DVD files, so it's okay to 
+So, for starters, we need to create a virtual machine without any disk attached. This process is exactly the same as creating a virtual machine on Proxmox with a few exceptions: no disk files are generated or included as we intend to import the disk of the system afterwards. Also, there is no need to use CD/DVD files, so it's okay to 
 just set the option of not using any media.
 
 ![No media](/assets/images/posts/2/no_media.png){: width="100%" height="100%"}
