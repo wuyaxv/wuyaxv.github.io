@@ -52,12 +52,12 @@ social:
   - service: github
     username: wuyaxv
     link: https://github.com/wuyaxv
-      - service: x
-        username: wu_yaxu
-        link: https://twitter.com/wu_yaxu
-      - service: telegram
-        username: wuyaxv
-        link: https://t.me/wuyaxv
+  - service: x
+    username: wu_yaxu
+    link: https://twitter.com/wu_yaxu
+  - service: telegram
+    username: wuyaxv
+    link: https://t.me/wuyaxv
 
 # Plugins
 plugins:
